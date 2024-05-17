@@ -17,10 +17,11 @@ with open("README.md", encoding="utf-8", errors="replace") as fh:
 
 setuptools.setup(
     name="deeplabcut",
-    version="2.3.9",
+    version="2.4.0",
     author="A. & M.W. Mathis Labs",
     author_email="alexander@deeplabcut.org",
-    description="Markerless pose-estimation of user-defined features with deep learning",
+    description="Markerless pose-estimation of user-defined features with deep learning\n"
+                "Custom distribution of DeepLabCut without torch dependency.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/DeepLabCut/DeepLabCut",
@@ -39,7 +40,6 @@ setuptools.setup(
         "scikit-learn>=1.0",
         "scipy>=1.9",
         "statsmodels>=0.11",
-        "torch",
         "tqdm",
         "pyyaml",
         "Pillow>=7.1",

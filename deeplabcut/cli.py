@@ -253,7 +253,7 @@ def train_network(_, *args, **kwargs):
     "-num",
     "--num_shuffles",
     "shuffle",
-    default=[1],
+    default=1,
     help="Shuffle index of the training dataset. Default is set to 1.",
 )
 @click.option(
@@ -270,9 +270,10 @@ def evaluate_network(_, config, **kwargs):
     python3 dlc.py evaluate_network  /home/project/reaching/config.yaml
 
     """
-    from deeplabcut.pose_estimation_tensorflow import evaluate
+    # from deeplabcut.pose_estimation_tensorflow.core.evaluate import evaluate
+    from deeplabcut.pose_estimation_tensorflow.core import evaluate
 
-    evaluate.evaluate_network(config, **kwargs)
+    evaluate.evaluate_network(config)
 
 
 ###########################################################################################################################
